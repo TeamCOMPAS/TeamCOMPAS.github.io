@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html">
+<TITLE>Team COMPAS</TITLE>
+</HEAD>
+<BODY bgcolor=black
+text=white
+link=#green
+alink=#green
+vlink=lightgreen>
+
+<Center>
+<font color=white size=5>Team COMPAS</font><BR><BR>
+
+<BR>
+<HR>
+<BR>
+
+<font color=white>
+
+<TABLE BORDER=0>
+<TR>
+<TD WIDTH=80%">
+
+<P>Temporary page: <A href="http://www.sr.bham.ac.uk/compas/">link</A>.
+
+<TD WIDTH=20% ALIGN=RIGHT>
+
+<TD WIDTH=20% ALIGN=RIGHT>
+<IMG SRC="logo.jpg" height=200>
+</TR>
+</TABLE>
+
+</font>
+</BODY>
+</HTML>

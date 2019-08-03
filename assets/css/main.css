@@ -368,6 +368,30 @@
 		margin: -12.5px 0 -1px -12.5px;
 	}
 
+	.column1 { /* Reinhold Addition */
+		float: left;
+		/*width: 33.33%; */
+		width: 25%;
+	}
+
+	.column2 { /* Reinhold Addition */
+		float: left;
+		/*width: 33.33%; */
+		width: 23%;
+	}
+
+	.column3 { /* Reinhold Addition */
+		float: left;
+		/*width: 33.33%; */
+		width: 18%;
+	}
+
+	.column4 { /* Reinhold Addition */
+		float: left;
+		/*width: 33.33%; */
+		width: 34%;
+	}
+
 	.\31 2u, .\31 2u\24 {
 		width: 100%;
 		clear: none;

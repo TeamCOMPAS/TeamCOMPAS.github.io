@@ -370,27 +370,6 @@
 
 	.column ul { /* Reinhold Addition */
 		display:table; margin:0 auto;	
-		/*float: left;*/
-		/*width: 33.33%; */
-		/*width: 25%;*/
-	}
-
-	.column2 { /* Reinhold Addition */
-		/*float: right;*/
-		/*width: 33.33%; */
-		/*width: 23%;*/
-	}
-
-	.column3 { /* Reinhold Addition */
-		/*float: left;*/
-		/*width: 33.33%; */
-		/*width: 18%;*/
-	}
-
-	.column4 { /* Reinhold Addition */
-		/*float: right;*/
-		/*width: 33.33%; */
-		/*width: 34%;*/
 	}
 
 	.\31 2u, .\31 2u\24 {

@@ -4,360 +4,530 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
+<!-- Reinhold TODO 
+	Fix details of the current papers
+		2 Stevenson 2017s - what to do?
+	DONE - Add in the other papers (with details)
+	Add new things to the "recent news" page
+	Check with group - what bolding do they want (bold the COMPAS members?)
+	DONE Go back to index: setup the column layout identically to here, where news and publications are in a right column for wide-windows, but stacked vertically for narrow windows
+	Fix up accents (Vigna-Gomez, Schroeder, Szecsi, Muller, others?)
+	Find a way to run Latex in HTML (optional, but see Stevenson 2019)
+-->
+
 <html>
 	<head>
-		<title>COMPAS| Science</title>
+		<title>COMPAS | Science</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header">
+			<div id="header">
 
-					<!-- Logo -->
-						<img class="image logo" src="images/COMPAS.png" alt="" /><h1><a href="index.html" id="logo"> COMPAS <em>| Science</em></a></h1>
+				<!-- Logo -->
+				<img class="image logo" src="images/COMPAS.png" alt="" />
+				<h1><a href="index.html" id="logo"> COMPAS <em>| Science</em></a></h1>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">About</a>
-									<ul>
-										<li><a href="index.html#hello">Understanding binaries</a></li>
-										<li><a href="index.html#team">Our team</a></li>
-									</ul>
-								</li>
-								<li class="current">
-									<a href="science.html">Science</a>
-									<ul>
-										<li><a href="science.html#intro">Introduction</a></li>
-										<li>
-											<a href="science.html#papers">Papers</a>
-											<ul>
-												<li><a href="science.html#171106287">Sensitivity to pop synthesis parameters</a></li>
-												<li><a href="science.html#170306873">Spin&ndash;orbit misalignment</a></li>
-												<li><a href="science.html#16080822">Model-independent inference</a></li>
-												<li><a href="science.html#150407802">Distinguishing pop synthesis models</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
-
-				</div>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">About</a>
+								<!-- Don't want to separate these now that they are adjacent columns
+								<ul>
+									<li><a href="index.html#hello">Understanding binaries</a></li>
+									<li><a href="index.html#team">Our team</a></li>
+								</ul>
+								-->
+							</li>
+							<li class="current">
+								<a href="science.html">Science</a>
+								<ul>
+									<li><a href="science.html#intro">Introduction</a></li>
+									<li>
+										<a href="science.html#papers">Papers</a>
+										<!-- Should decide if we want to list all papers here, there will be many
+										<ul>
+											<li><a href="science.html#171106287">Sensitivity to pop synthesis parameters</a></li>
+											<li><a href="science.html#170306873">Spin&ndash;orbit misalignment</a></li>
+											<li><a href="science.html#16080822">Model-independent inference</a></li>
+											<li><a href="science.html#150407802">Distinguishing pop synthesis models</a></li>
+										</ul>
+										-->
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+			</div>
 
 			<!-- Main -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row 200%">
-							<div class="8u 12u(narrower)">
-								<div id="content">
+			<section class="wrapper style1">
+				<div class="container">
+					<div class="row 200%">
 
-									<!-- Content -->
+						<!-- Left Column: Opening Paragraph & Papers -->
+						<div class="8u 12u(narrower)">
+							<div id="content">
 
-										<article>
-											<header>
-												<h2 id="intro">How do binary black holes form?</h2>
-												<p>Unravelling binary physics</p>
-											</header>
-						
-											<p> We are making progress in understanding how two black holes can come together and merge.
+								<!-- Opening Paragraph -->
+								<article>
+									<header>
+										<h2 id="intro">How do binary black holes form?</h2>
+										<p>Unravelling binary physics</p>
+									</header>
+					
+									<p>We are making progress in understanding how two black holes can come together and merge.  </p>
 
-											<p>During its first four months of taking data, Advanced LIGO (Laser Interferometer Gravitational-wave Observatory) detected gravitational 
-											waves from two mergers of pairs of black holes, GW150914 and GW151226, along with the statistically less significant black hole merger candidate LVT151012.	More recently, the discovery of another binary black hole merger, GW170104, has been announced.
+									<p>During its first four months of taking data, Advanced LIGO (Laser Interferometer Gravitational-wave Observatory) detected gravitational waves from two mergers of pairs of black holes, GW150914 and GW151226, along with the statistically less significant black hole merger candidate LVT151012.	More recently, the discovery of another binary black hole merger, GW170104, has been announced.  </p>
 
-											<p>These confirmed a major prediction of Albert Einstein's 1915 general theory of relativity and opened an unprecedented new window onto the cosmos.
-											However, we still do not know how such pairs of merging black holes form.
+									<p>These confirmed a major prediction of Albert Einstein's 1915 general theory of relativity and opened an unprecedented new window onto the cosmos.  However, we still do not know how such pairs of merging black holes form.  </p>
 
-											<p>In order for the black holes to merge within the age of the Universe by emitting gravitational waves, they must start out close together by astronomical standards,
-											no more than about a fifth of the distance between the Earth and the Sun.
-											However, massive stars, which are the progenitors of the black holes that LIGO has observed, expand to be much larger than this in the course of their evolution. 
-The key challenge, then, is how to fit such large stars within a very small orbit.
-											Several possible scenarios have been proposed to address this.
-
-<span class="image featured"><img src="images/Figure1-GW170104.png" alt="" class="image left"/>
-<center>
-<p style="font-size:10px">Figure 1 from <a href="http://www.nature.com/articles/ncomms14906"> 
-Stevenson et al., Nature Communications 8, 14906 (2017) </a> updated to include GW170104</p>
-</center>
-</span>
+									<p>In order for the black holes to merge within the age of the Universe by emitting gravitational waves, they must start out close together by astronomical standards, no more than about a fifth of the distance between the Earth and the Sun.  However, massive stars, which are the progenitors of the black holes that LIGO has observed, expand to be much larger than this in the course of their evolution.  The key challenge, then, is how to fit such large stars within a very small orbit. Several possible scenarios have been proposed to address this.  </p>
+								</article>
 
 
-<p> In a paper published in <i>Nature Communications</i>, we have have shown that all three observed events can be formed via the same 
-formation channel: isolated binary evolution via a common-envelope phase. In this channel, two massive progenitor stars start out at quite 
-wide separations. The stars interact as they expand, engaging in several episodes of mass transfer. The latest of these is typically a 
-common envelope - a very rapid, dynamically unstable mass transfer that envelops both stellar cores in a dense cloud of hydrogen gas. 
-Ejecting this gas from the system takes energy away from the orbit. This brings the two stars sufficiently close together for 
-gravitational-wave emission to be efficient, right at the time when they are small enough that such closeness will no longer put them into 
-contact. The whole process takes a few million years to form two black holes, with a possible subsequent delay of billions of years before 
-the black holes merge and form a single black hole.
+								<!-- Papers Header -->
+								<header id="papers" class="major">
+									<h2>Selected Papers</h2>
+									<p>Summaries and data releases of papers which directly use COMPAS</p>
+								</header>
 
-<p> The simulations have also helped the team to understand the typical properties of the stars that can go on to form such pairs of merging black holes and the environments where this can happen. 
+								<!-- Complete list of papers -->
+								<article>	
+									<p> <strong>Note:</strong> The data used in some of the COMPAS papers has been made available to the public. <br>For access, please see <a href="https://zenodo.org/communities/compas/?page=1&size=20">our Zenodo page</a>, or check the appropriate paper below. For a complete list of papers from the COMPAS group members, see <a href="https://ui.adsabs.harvard.edu/user/libraries/sVNorqtLSsK2hEZ7--kcgw">Christopher Berry's master list.</a></p>
+								</article>	
 
-<p> <a href="https://zenodo.org/communities/compas/?page=1&size=20"> The simulations behind the paper are now available.</a>
-
-<p> <a href="http://www.nature.com/articles/ncomms14906"> Paper </a>
-						
-										</article>
-
-										<!-- Barrett et al. 2018 -->
-										<header id="papers" class="major">
-											<h2>Papers</h2>
-											<p>Summaries and data releases for our work</p>
-										</header>
-
-										<article>
-											<header>
-												<h2 id="171106287" style="margin-bottom:0.5em">Accuracy of inference on the physics of binary evolution from gravitational-wave observations</h1>
-												<h1><strong>Barrett et al. 2018</strong></h1>
-											</header>
-											
-											<button class="collapsible">Details</button>
-
-											<div class="content"> 
-												<!-- Authors -->
-												<p>
-													<strong>Authors:</strong> <strong>Barrett, J. W.</strong>, <strong>Gaebel, S. M.</strong>, <strong>Neijssel, C. J.</strong>, <strong>Vigna-Gómez, A.</strong>, <strong>Stevenson, S.</strong>, <strong>Berry, C. P. L.</strong>, <strong>Farr, W. M.</strong> &amp; <strong>Mandel, I.</strong></br>
-													<strong>Journal:</strong> <a href="http://doi.org/10.1093/mnras/sty908">MNRAS</a></br>
-													<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1711.06287">1711.06287 [astro-ph.HE]</a>
-												</p>
-
-												<!-- Description -->
-												<span class="image featured">
-													<img src="images/standardDeviationPlotCut.png" alt="" class="image left"/>
-												</span>
-
-												<p> 
-													Gravitational waves give us a unique insight into the properties of binary black holes.  The information from gravitational waves should help us figure out how these black holes form&mdash;in this paper we investigate exactly how accurately we will be able to determine details of binary evolution.  We consider populations of binary black holes simulated using COMPAS, and how sensitive the distribution of chirp masses and merger rate (which will be measured through gravitational waves) are to changes in the input physics.  In particular, we consider four of the most uncertain parameters: the supernova kick (&sigma;<sub>kick</sub>), the common-envelope efficiency (&alpha;<sub>CE</sub>), and the mass loss rates during the Wolf&ndash;Rayet and luminous blue variable phases (<i>f</i><sub>WR</sub> and <i>f</i><sub>LBV</sub>).  We quantify the information we can gain from observations using the Fisher matrix, which includes correlations between parameters.  The plot above shows (fractional) measurement uncertainties for many realisations of the binary black hole population after 1000 observations (the uncertainties scale inversely with the square root of the number of observations).  We find that we can distinguish populations which differ by just a few percent in these parameters!  The measurements are much better when adding in the chirp masses as well as the rates, so perhaps adding in more information from gravitational-wave (or other complementary) observations will improve things even further.
-												</p>
-											</div>
-
-										</article>
-	
-						
-										<!-- Stevenson et al. 2018 -->
-										<article>
-											<header>
-												<h2 id="170306873" style="margin-bottom:0.5em">Hierarchical analysis of gravitational-wave measurements of binary black hole spin&ndash;orbit misalignment</h2>
-												<h1><strong>Stevenson et al. 2017</strong><h1>
-											</header>
-
-											<button class="collapsible">Details</button>
-
-											<div class="content"> 
-
-												<!-- Authors -->
-												<p>
-													<strong>Authors:</strong> <strong>Stevenson, S.</strong>, <strong>Berry, C. P. L.</strong> &amp; <strong>Mandel, I.</strong></br>
-													<strong>Journal:</strong> <a href="http://doi.org/10.1093/mnras/stx1764">MNRAS</a></br>
-													<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1703.06873">1703.06873 [astro-ph.HE]</a>
-												</p>
-
-												<!-- Description -->
-												<span class="image featured"><img src="images/observations_lambda2.png" alt="" class="image left"/></span>
-												<p>
-													LIGO recently detected gravitational-waves from 4 likely mergers of black holes, GW150914, LVT151012, GW151226 and GW170104.  As LIGO detects more and more black hole mergers, we will be able to start learning about how binary black holes form.  Here we study one possible fingerprint of binary black holes formation&mdash; the angles between the black holes' spins axes and the direction perpendicular to the binary's orbital plane.
-												</p>
-												<p>
-													Two possible families of ways to form a binary black hole exist:
-													<ul>
-														<li>1. The evolution of a pair of stars away from anything else (isolated binary evolution).  This predicts that the tilt angles are typically small; binaries are said to be aligned.</li> 
-														<li>2. Formation through many dynamical encounters in a dense stellar environment such as a globular cluster.  In this case, black holes typically have their spins misaligned with the orbit.</li>
-													</ul>
-													We show that with as few as 5 gravitational-wave observations we could confidently distinguish between the extreme cases of all binary black holes forming through one of these two channels, assuming black holes spin reasonably rapidly.  With around 100 detections we will start to be able to measure the fractions of binary black holes forming in each way (assuming that there is a mixture).  The plot above shows in blue measurements of the fraction of binary black holes forming dynamically as a function of the number of gravitational-wave observations.  The animation below shows how the measurements for a mixture of four different models (&lambda;<sub>1</sub>, &lambda;<sub>3</sub> and &lambda;<sub>4</sub> are the fractions for models of isolated binary evolution with different assumptions about the amount of misalignment, and &lambda;<sub>2</sub> is the fraction for dynamically formed binaries).
-												</p>
-											
-												<span class="image featured"><img src="images/triangle_plot.gif" alt="" class="image left"/></span>
-											</div>
-										</article>
+								
 
 
+								<!-- Stevenson et al. 2019 -->
+			<article>
+				<header>
+					<h2 id="190402821" style="margin-bottom:0.5em">The Impact of Pair-Instability Mass Loss on the Binary Black Hole Mass Distribution</h2>
+					<h1><strong>Stevenson et al. 2019</strong><h1>
+				</header>
+
+				<button class="collapsible">Details</button>
+
+				<div class="content"> 
+					<!-- Authors -->
+					<p>
+					<strong>Authors:</strong> Stevenson, S., Sampson, M., Powell, J., Vigna-Gomez, A., Neijssel, C., Szecsi, D., Mandel, I.<br>
+					<!-- <strong>Journal:</strong> <a href="website.com">JOURNAL</a><br> -->
+					<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1904.02821">1904.02821 [astro-ph.HE]</a>
+					</p>
+
+					<!-- Description -->
+					<p> A population of binary black hole mergers has now been observed in gravitational waves by Advanced LIGO and Virgo. The masses of these black holes appear to show evidence for a pile-up between $30$--$45$\,\Msol{} and a cut-off above $\sim 45$\,\Msol. One possible explanation for such a pile-up and subsequent cut-off are pulsational pair-instability supernovae (PPISNe) and pair-instability supernovae (PISNe) in massive stars. We investigate the plausibility of this explanation in the context of isolated massive binaries. We study a population of massive binaries using the rapid population synthesis software COMPAS, incorporating models for PPISNe and PISNe. Our models predict a maximum black hole mass of $40$\,\Msol{}. We expect $\sim 0.5$--$4$\% of all binary black hole mergers at redshift z = 0 will include at least one component that went through a PPISN (with mass $30$--$40$\,\Msol{}), constituting $\sim 5$--$25$\% of binary black hole mergers observed during the first two observing runs of Advanced LIGO and Virgo. Empirical models based on fitting the gravitational-wave mass measurements to a combination of a power law and a Gaussian find a fraction too large to be associated with PPISNe in our models. The rates of PPISNe and PISNe track the low metallicity star formation rate, increasing out to redshift $z = 2$. These predictions may be tested both with future gravitational-wave observations and with observations of superluminous supernovae.  </p>
+
+				</div>
+			</article>
 
 
+								<!-- Vigna-Gomez et al. 2018 -->
+			<article>
+				<header>
+					<h2 id="1805.07974" style="margin-bottom:0.5em">On the Formation History of Galactic Double Neutron Stars</h2>
+					<h1><strong>Vigna-Gomez et al. 2018</strong><h1>
+				</header>
+
+				<button class="collapsible">Details</button>
+
+				<div class="content"> 
+					<!-- Authors -->
+					<p>
+					<strong>Authors:</strong> Vigna-Gomez, A., Neijssel, C., Stevenson, S., Barrett, J., Belczynski, K., Justham, S., de Mink, S., Muller, B., Podsiadlowski, P., Benzo, M., Szecsi, D., Mandel, I.<br>
+					<strong>Journal:</strong> <a href="https://doi.org/10.1093/mnras/sty2463">MNRAS</a><br>
+					<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1805.07974">1805.07974 [astro-ph.HE]</a>
+					</p>
+
+					<!-- Description -->
+					<p> Double neutron stars (DNSs) have been observed as Galactic radio pulsars, and the recent discovery of gravitational waves from the DNS merger GW170817 adds to the known DNS population. We perform rapid population synthesis of massive binary stars and discuss model predictions, including DNS formation rates, mass distributions, and delay time distributions. We vary assumptions and parameters of physical processes such as mass transfer stability criteria, supernova natal kick distributions, remnant mass prescriptions, and common-envelope energetics. We compute the likelihood of observing the orbital period-eccentricity distribution of the Galactic DNS population under each of our population synthesis models, allowing us to quantitatively compare the models. We find that mass transfer from a stripped post-helium-burning secondary (case BB) on to a neutron star is most likely dynamically stable. We also find that a natal kick distribution composed of both low (Maxwellian σ =30 km s^{-1}) and high (σ =265 km s^{-1}) components is preferred over a single high-kick component. We conclude that the observed DNS mass distribution can place strong constraints on model assumptions.  </p>
+
+				</div>
+			</article>
 
 
+								<!-- Neijssel et al. 2019 -->
+			<article>
+				<header>
 
-										<article>
-											<header>
-												<h2 id="16080822" style="margin-bottom:0.5em">Model-independent inference on compact-binary observations</h2>
-												<h1><strong>Mandel et al. 2017</strong><h1>
-											</header>
+					<h2 id="190608136" style="margin-bottom:0.5em">The Effect of the Metallicity-Specific Star Formation History on Double Compact Object Mergers</h2>
+					<h1><strong>Neijssel et al. 2019</strong><h1>
+				</header>
 
-											<button class="collapsible">Details</button>
+				<button class="collapsible">Details</button>
 
-											<div class="content"> 
+				<div class="content"> 
+					<!-- Authors -->
+					<p>
+					<strong>Authors:</strong> Neijssel, C., Vigna-Gomez, A., Stevenson, S., Barrett, J., Gaebel, S., Broekgaarden, F., de Mink, S., Szecsi, D., Vinciguerra, S., Mandel, I.<br>
+					<!-- <strong>Journal:</strong> <a href="website.com">JOURNAL</a><br> -->
+					<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1906.08136">1906.08136 [astro-ph.HE]</a>
+					</p>
 
-												<p>
-												<strong>Authors:</strong> <strong>Mandel, I.</strong>, Farr, W. M., Colonna, A., <strong>Stevenson, S.</strong>, Tiňo, P. &amp; Veitch, J.</br>
-												<strong>Journal:</strong> <a href="http://mnras.oxfordjournals.org/content/early/2016/11/08/mnras.stw2883">MNRAS</a></br>
-												<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1608.08223">1608.08223 [astro-ph.HE]</a>
-												</p>
+					<!-- Description -->
+					<p> We investigate the impact of uncertainty in the metallicity-specific star formation rate over cosmic time on predictions of the rates and masses of double compact object mergers observable through gravitational waves. We find that this uncertainty can change the predicted detectable merger rate by more than an order of magnitude, comparable to contributions from uncertain physical assumptions regarding binary evolution, such as mass transfer efficiency or supernova kicks. We statistically compare the results produced by the COMPAS population synthesis suite against a catalog of gravitational-wave detections from the first two Advanced LIGO and Virgo observing runs. We find that the rate and chirp mass of observed binary black hole mergers can be well matched under our default evolutionary model with a star formation metallicity spread of 0.39 dex around a mean metallicity ⟨Z⟩ that scales with redshift z as ⟨Z⟩=0.035×10−0.23z, assuming a star formation rate of 0.01×(1+z)2.77/(1+((1+z)/2.9)4.7)M⊙ Mpc−3 yr−1. Intriguingly, this default model predicts that 80\% of the approximately one binary black hole merger per day that will be detectable at design sensitivity will have formed through isolated binary evolution with only dynamically stable mass transfer, i.e., without experiencing a common-envelope event.  </p>
+
+				</div>
+			</article>
 
 
-												<span class="image featured"><img src="images/bin_density.png" alt="" class="image left"/></span>
-												<p>
-		The increasing number of gravitational-wave observations promises to lead to insights into stellar binary evolution.
-		One approach is to compare specific evolution models against observations; however, given the uncertainty in the models, a model-independent approach to astrophysical inference is desirable.
-		In an <a href="http://arxiv.org/abs/1503.03172">earlier paper</a>, we advocated clustering in a multi-dimensional parameter space.
-		Here, we propose a practical procedure to clustering observations which are subject to significant measurement errors.
-		We apply our method to a mock data set of population-synthesis predictions for compact binaries incorporating realistic measurement uncertainties.
-		We demonstrate that a few tens of observations are sufficient to accurately distinguish subpopulations of sources.
-		The example shows what we could infer with varying numbers of observations. The plots shows inferred population density for different mass bins assuming a Gaussian process prior; you can make out clusters for binary neutron stars (in the bottom left corner), neutron star&ndash;black hole binaries (along the edges) and binary black holes (in the centre).</p>
-										</div>
-										</article>
+								<!-- Bavera et al. 2019 -->
+			<article>
+				<header>
+					<h2 id="190612257" style="margin-bottom:0.5em">The Origin of Spin in Binary Black Holes: Predicting the Distributions of the Main Observables of Advanced LIGO</h2>
+					<h1><strong>Bavera et al. 2019</strong><h1>
+				</header>
 
-										<article>
-											<header>
-												<h2 id="150407802" style="margin-bottom:0.5em">Distinguishing compact binary population synthesis models using gravitational wave observations of coalescing binary black holes</h2>
-												<h1><strong>Stevenson et al. 2017</strong><h1>
-											</header>
+				<button class="collapsible">Details</button>
 
-											<button class="collapsible">Details</button>
+				<div class="content"> 
+					<!-- Authors -->
+					<p>
+					<strong>Authors:</strong> Bavera, S., Fragos, T., Qin, Y., Zapartas, E., Neijssel, C., Mandel, I., Batta, A., Gaebel, S., Kimball, C., Steveson, S.<br>
+					<!-- <strong>Journal:</strong> <a href="website.com">JOURNAL</a><br> -->
+					<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1906.12257">1906.12257 [astro-ph.HE]</a>
+					</p>
 
-											<div class="content"> 
+					<!-- Description -->
+					<p> We study the formation of coalescing binary black holes via the evolution of isolated field binaries that go through the common envelope phase in order to obtain the combined distributions of the main observables of Advanced LIGO.  We use a hybrid technique that combines the parametric binary population synthesis code COMPAS with detailed binary evolution simulations performed with the MESA code.  We then convolve our binary evolution calculations with the redshift- and metallicity-dependent star-formation rate and the selection effects of gravitational-wave detectors to obtain predictions of observable properties.  By assuming efficient angular momentum transport, we are able to present a model capable of predicting simultaneously the three main gravitational-wave observables: the effective inspiral spin parameter χeff, the chirp mass Mchirp and the cosmological redshift of merger zmerger.  We find an excellent agreement between our model and the ten events from the first two advanced detector observing runs.  We make predictions for the third observing run O3 and for Advanced LIGO design sensitivity.  We expect 59% of events with χeff<0.1, while the remaining 41% of events with χeff≥0.1 are split into 9% with Mchirp<15 M⊙ and 32% with Mchirp≥15 M⊙.  In conclusion, the favorable comparison of the existing LIGO/Virgo observations with our model predictions gives support to the idea that the majority, if not all of the observed mergers, originate from the evolution of isolated binaries.  The first-born black hole has negligible spin because it lost its envelope after it expanded to become a giant star, while the spin of the second-born black hole is determined by the tidal spin up of its naked helium star progenitor by the first-born black hole companion after the binary finished the common-envelope phase.  </p> 
+				</div>
+			</article>
 
-												<p>
-												<strong>Authors:</strong> <strong>Stevenson S.</strong>, Ohme, F. &amp; Fairhurst, S.</br>
-												<strong>Journal:</strong> <a href="http://dx.doi.org/10.1088/0004-637X/810/1/58">ApJ</a></br>
-												<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1504.07802">1504.07802 [astro-ph.HE]</a>
-												</p>
 
-												<span class="image featured"><img src="images/square_plot.png" alt="" class="image left"/></span>
+								<!-- Broekgaarden et al. 2019 -->
+			<article>
+				<header>
+					<h2 id="190500910" style="margin-bottom:0.5em">STROOPWAFEL: Simulating Rare Outcomes from Astrophysical Populations with Applications to Gravitational-Wave Sources</h2>
+					<h1><strong>Broekgaarden et al. 2019</strong><h1>
+				</header>
 
-												<p>Advanced LIGO began the hunt for gravitational waves from colliding black holes in 2015, with Advanced Virgo to join in 2017. 
-		Black holes are the remains of stars with masses tens of times the mass of the Sun.
-		One way for two of these black holes to collide is to live and die as a binary.
-		These stars constantly shed mass in stellar winds, violently strip mass from one another, explode as supernova, and even engulf one another in common-envelope events.
-		Most of these processes have so far been studied using systems we can see, such as X-ray binaries, but remain poorly understood.
-		However, they also leave an imprint on the masses of the black holes.
-		Therefore, by comparing the distribution of masses of binary black holes that Advanced LIGO and Advanced Virgo find with a prediction from a model, we can learn about these extreme evolutionary processes and the lives of massive stars.
-		The chequerboard type plot shown on the left compares simulated observations from each model in a set of <a href="http://www.syntheticuniverse.org">models</a> to all of the others in turn.
-		Darker squares indicate that models are similar, and lighter squares indicate that we can tell models apart.
-		The dark strip on the diagonal shows that models do look like themselves.
-		Since there are lots of lighter squares, it is possible to distinguish between many models.
-		We should be able to learn lots about binary evolution over the next couple of years!</p>
-											</div>
-										</article>
+				<button class="collapsible">Details</button>
 
-								</div>
-							</div>
+				<div class="content"> 
+					<!-- Authors -->
+					<p>
+					<strong>Authors:</strong> Broekgaarden, F., Justham, S., de Mink, S., Gair, J., Mandel, I., Stevenson, S., Barrett, J., Vigna-Gomez, A., Neijssel, C.<br>
+					<!-- <strong>Journal:</strong> <a href="website.com">JOURNAL</a><br> -->
+					<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1905.00910">1905.00910 [astro-ph.HE]</a>
+					<strong>Data Release:</strong> <a href="https://zenodo.org/record/3372820#.XV0vjugzY2x">Zenodo.com</a>
+					</p>
 
-	
-							<div class="4u 12u(narrower)">
-								<div id="sidebar">
+					<!-- Description -->
+					<p> Gravitational-wave observations of double compact object (DCO) mergers are providing new insights into the physics of massive stars and the evolution of binary systems. Making the most of expected near-future observations for understanding stellar physics will rely on comparisons with binary population synthesis models. However, the vast majority of simulated binaries never produce DCOs, which makes calculating such populations computationally inefficient. We present an importance sampling algorithm, STROOPWAFEL, that improves the computational efficiency of population studies of rare events, by focusing the simulation around regions of the initial parameter space found to produce outputs of interest. We implement the algorithm in the binary population synthesis code COMPAS, and compare the efficiency of our implementation to the standard method of Monte Carlo sampling from the birth probability distributions. STROOPWAFEL finds $\sim$25-200 times more DCO mergers than the standard sampling method with the same simulation size, and so speeds up simulations by up to two orders of magnitude. Finding more DCO mergers automatically maps the parameter space with far higher resolution than when using the traditional sampling. This increase in efficiency also leads to a decrease of a factor $\sim$3-10 in statistical sampling uncertainty for the predictions from the simulations. This is particularly notable for the distribution functions of observable quantities such as the black hole and neutron star chirp mass distribution, including in the tails of the distribution functions where predictions using standard sampling can be dominated by sampling noise.  </p>
 
-									<!-- Sidebar -->
+				</div>
+			</article>
 
-										<!--<section>
-											<span class="image"><img src="images/COMPAS.png" alt="COMPAS logo" /></span>
-										</section>-->
 
-										<section>
-											<h3>Recent news &amp; results</h3>
+								<!-- Schroeder et al. 2019 -->
+			<article>
+				<header>
+					<h2 id="190604189" style="margin-bottom:0.5em">Explosions Driven by the Coalescence of a Compact Object with the Core of a Massive-Star Companion Inside a Common Envelope: Circumstellar Properties, Light Curves, and Population Statistics</h2>
+					<h1><strong>Schroeder et al. 2019</strong><h1>
+				</header>
 
-											<p>22 May 2018: New <a href="http://arxiv.org/abs/1806.05820">not-a-review</a> on massive binary black holes.</p>
+				<button class="collapsible">Details</button>
 
-											<p>22 May 2018: New <a href="http://arxiv.org/abs/1805.07974">preprint</a> on simulating the Galactic binary neutron star population. Data are <a href="https://zenodo.org/communities/compas/?page=1&size=20">available</a>.</p>
+				<div class="content"> 
+					<!-- Authors -->
+					<p>
+					<strong>Authors:</strong> <br> Schroeder, S., MacLeod, M., Loeb, A., Vigna-Gomez, A., Mandel, I.<br>
+					<!-- <strong>Journal:</strong> <a href="website.com">JOURNAL</a><br> -->
+					<strong>arXiv:</strong> <a href="https://arxiv.org/abs/1906.04189">1906.04189 [astro-ph.HE]</a>
+					</p>
 
-											<p>12 April 2018: Paper published in <a href="http://doi.org/10.1093/mnras/sty908"><em>Monthly Notices of the Royal Astronomical Society</em></a> on measuring pop synthesis parameters with gravitational-wave observations.</p>
+					<!-- Description -->
+					<p> We model explosions driven by the coalescence of a black hole or neutron star with the core of its massive-star companion. Upon entering a common envelope phase, a compact object may spiral all the way to the core. The concurrent release of energy is likely to be deposited into the surrounding common envelope, powering a merger-driven explosion. We use hydrodynamic models of binary coalescence to model the common envelope density distribution at the time of coalescence. We find toroidal profiles of material, concentrated in the binary's equatorial plane and extending to many times the massive star's original radius. We use the spherically-averaged properties of this circumstellar material (CSM) to estimate the emergent light curves that result from the interaction between the blast wave and the CSM. We find that typical merger-driven explosions are brightened by up to three magnitudes by CSM interaction. From population synthesis models we discover that the brightest merger-driven explosions, MV∼−18 to −19, are those involving black holes because they have the most massive and extended CSM. Black hole coalescence events are also common; they represent about 50% of all merger-driven explosions and approximately 0.3% of the core-collapse rate. Merger-driven explosions offer a window into the highly-uncertain physics of common envelope interactions in binary systems by probing the properties of systems that merge rather than eject their envelopes. </p>
 
-											<p>16 November 2017: New <a href="http://arxiv.org/abs/1711.06287">preprint</a> on measuring binary-evolution parameters with gravitational-wave observations.</p>
+				</div>
+			</article>
 
-											<p>24 August 2017: Paper published in <a href="http://doi.org/10.1038/nature23453"><em>Nature</em></a> on spin measurements for LIGO's observations.</p>
 
-											<p>14 July 2017: Paper published in <a href="http://doi.org/10.1093/mnras/stx1764"><em>Monthly Notices of the Royal Astronomical Society</em></a> on hierarchical modelling.</p>
+								<!-- Barrett et al. 2018 -->
+								<article>
+									<header>
+										<h2 id="171106287" style="margin-bottom:0.5em">Accuracy of Inference on the Physics of Binary Evolution from Gravitational-Wave Observations</h1>
+										<h1><strong>Barrett et al. 2018</strong></h1>
+									</header>
+									
+									<button class="collapsible">Details</button>
 
-											<p>30 May 2017: New <a href="http://doi.org/10.1017/S1743921317000059">conference proceedings</a> on exploring binary population parameters.</p>
+									<div class="content"> 
+										<!-- Authors -->
+										<p>
+											<strong>Authors:</strong> Barrett, J. W., Gaebel, S. M., Neijssel, C. J., Vigna-Gómez, A., Stevenson, S., Berry, C. P. L., Farr, W. M. &amp; Mandel, I.<br>
+											<strong>Journal:</strong> <a href="http://doi.org/10.1093/mnras/sty908">MNRAS</a><br>
+											<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1711.06287">1711.06287 [astro-ph.HE]</a>
+										</p>
 
-											<p>5 April 2017: Paper published in <a href="http://dx.doi.org/10.1038/ncomms14906"><em>Nature Communications</em></a> on reproducing LIGO's observations.</p>
+										<!-- Description -->
+										<span class="image featured">
+											<img src="images/standardDeviationPlotCut.png" alt="" class="image left"/>
+										</span>
 
-											<p>21 March 2017: New <a href="http://arxiv.org/abs/1703.06873">preprint</a> on hierarchical modelling.</p>
+										<p> Gravitational waves give us a unique insight into the properties of binary black holes.  The information from gravitational waves should help us figure out how these black holes form&mdash;in this paper we investigate exactly how accurately we will be able to determine details of binary evolution.  We consider populations of binary black holes simulated using COMPAS, and how sensitive the distribution of chirp masses and merger rate (which will be measured through gravitational waves) are to changes in the input physics.  In particular, we consider four of the most uncertain parameters: the supernova kick (&sigma;<sub>kick</sub>), the common-envelope efficiency (&alpha;<sub>CE</sub>), and the mass loss rates during the Wolf&ndash;Rayet and luminous blue variable phases (<i>f</i><sub>WR</sub> and <i>f</i><sub>LBV</sub>).  We quantify the information we can gain from observations using the Fisher matrix, which includes correlations between parameters.  The plot above shows (fractional) measurement uncertainties for many realisations of the binary black hole population after 1000 observations (the uncertainties scale inversely with the square root of the number of observations).  We find that we can distinguish populations which differ by just a few percent in these parameters!  The measurements are much better when adding in the chirp masses as well as the rates, so perhaps adding in more information from gravitational-wave (or other complementary) observations will improve things even further.  </p>
+									</div>
+								</article>
 
-										</section>
 
-										<section>
-											<h3>Preprint &amp; publication links</h3>
-											<ul class="links">
-												<li><a href="http://arxiv.org/abs/1806.05820">Merging stellar-mass binary black holes</a></li>
-												<li><a href="http://arxiv.org/abs/1805.07974">On the formation history of Galactic double neutron stars</a></li>
-												<li><a href="http://arxiv.org/abs/1711.06287">Accuracy of inference on the physics of binary evolution from gravitational-wave observations</a></li>
-												<li><a href="http://arxiv.org/abs/1706.01385">Distinguishing spin-aligned and isotropic black hole populations with gravitational waves</a></li>
-												<li><a href="http://arxiv.org/abs/1703.06873">Hierarchical analysis of gravitational-wave measurements of binary black hole spin-orbit misalignments</a></li>
-												<li><a href="http://arxiv.org/abs/1608.08223">Model-independent inference on compact-binary observations</a></li>
-												<li><a href="http://arxiv.org/abs/1504.07802">Distinguishing compact binary population synthesis models using gravitational-wave observations of coalescing binary black holes</a></li>
+								<!-- Stevenson et al. 2017b -->
+								<article>
+									<header>
+										<h2 id="170306873" style="margin-bottom:0.5em">Hierarchical Analysis of Gravitational-Wave Measurements of Binary Black Hole Spin&ndash;Orbit Misalignment</h2>
+										<h1><strong>Stevenson et al. 2017b</strong><h1>
+									</header>
+
+									<button class="collapsible">Details</button>
+
+									<div class="content"> 
+
+										<!-- Authors -->
+										<p>
+											<strong>Authors:</strong> Stevenson, S., Berry, C. P. L. &amp; Mandel, I.<br>
+											strong>Journal:</strong> <a href="http://doi.org/10.1093/mnras/stx1764">MNRAS</a><br>
+											<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1703.06873">1703.06873 [astro-ph.HE]</a>
+										</p>
+
+										<!-- Description -->
+										<span class="image featured"><img src="images/observations_lambda2.png" alt="" class="image left"/></span>
+
+										<p> LIGO recently detected gravitational-waves from 4 likely mergers of black holes, GW150914, LVT151012, GW151226 and GW170104.  As LIGO detects more and more black hole mergers, we will be able to start learning about how binary black holes form.  Here we study one possible fingerprint of binary black holes formation&mdash; the angles between the black holes' spins axes and the direction perpendicular to the binary's orbital plane.  </p>
+
+										<p> Two possible families of ways to form a binary black hole exist:
+											<ul>
+												<li>1. The evolution of a pair of stars away from anything else (isolated binary evolution).  This predicts that the tilt angles are typically small; binaries are said to be aligned.</li> 
+												<li>2. Formation through many dynamical encounters in a dense stellar environment such as a globular cluster.  In this case, black holes typically have their spins misaligned with the orbit.</li>
 											</ul>
-											<footer>
-												<a href="http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?library&libname=COMPAS&libid=5491451795" class="button">NASA ADS</a>
-											</footer>
-										</section>
+											We show that with as few as 5 gravitational-wave observations we could confidently distinguish between the extreme cases of all binary black holes forming through one of these two channels, assuming black holes spin reasonably rapidly.  With around 100 detections we will start to be able to measure the fractions of binary black holes forming in each way (assuming that there is a mixture).  The plot above shows in blue measurements of the fraction of binary black holes forming dynamically as a function of the number of gravitational-wave observations.  The animation below shows how the measurements for a mixture of four different models (&lambda;<sub>1</sub>, &lambda;<sub>3</sub> and &lambda;<sub>4</sub> are the fractions for models of isolated binary evolution with different assumptions about the amount of misalignment, and &lambda;<sub>2</sub> is the fraction for dynamically formed binaries).
+										</p>
+									
+										<span class="image featured"><img src="images/triangle_plot.gif" alt="" class="image left"/></span>
+									</div>
+								</article>
 
-								</div>
+
+								<!-- Stevenson et al. 2017a -->
+								<article>
+									<header>
+										<h2 id="170401352" style="margin-bottom:0.5em">Formation of the First Three Gravitational-Wave Observations through Isolated Binary Evolution</h2>
+										<h1><strong>Stevenson et al. 2017a</strong><h1>
+									</header>
+
+									<button class="collapsible">Details</button>
+
+									<div class="content"> 
+										<!-- Authors -->
+										<p>
+											<strong>Authors:</strong> Stevenson, S., Vigna-Gomez, A., Mandel, I., Barrett, J., Neijssel, C., Perkins, D., de Mink., S.  
+											<strong>Journal:</strong> <a href="https://www.nature.com/articles/ncomms14906">Nature</a><br>
+											<strong>arXiv:</strong> <a href="https://arxiv.org/abs/1704.01352">1704.01352 [astro-ph.HE]</a>
+										</p>
+										<!-- Description -->
+
+										<span class="image featured"><img src="images/Figure1-GW170104.png" alt="" class="image left"/>
+											<center>
+												<p style="font-size:10px">Figure 1 from <a href="http://www.nature.com/articles/ncomms14906">Stevenson et al., Nature Communications 8, 14906 (2017)</a> updated to include GW170104</p>
+											</center>
+										</span>
+
+										<p> In a paper published in <i>Nature Communications</i>, we have have shown that all three observed events can be formed via the same formation channel: isolated binary evolution via a common-envelope phase. In this channel, two massive progenitor stars start out at quite wide separations. The stars interact as they expand, engaging in several episodes of mass transfer. The latest of these is typically a common envelope - a very rapid, dynamically unstable mass transfer that envelops both stellar cores in a dense cloud of hydrogen gas.  Ejecting this gas from the system takes energy away from the orbit. This brings the two stars sufficiently close together for gravitational-wave emission to be efficient, right at the time when they are small enough that such closeness will no longer put them into contact. The whole process takes a few million years to form two black holes, with a possible subsequent delay of billions of years before the black holes merge and form a single black hole. </p>
+										
+										<p> The simulations have also helped the team to understand the typical properties of the stars that can go on to form such pairs of merging black holes and the environments where this can happen. </p>
+										
+										<p> <a href="https://zenodo.org/communities/compas/?page=1&size=20"> Simulations Data</a></p>
+										
+									</div>
+								</article>
+
+
+								<!-- Barrett et al. 2017 -->
+			<article>
+				<header>
+					<h2 id="1704.03781" style="margin-bottom:0.5em">Exploring the Parameter Space of Compact Binary Population Synthesis</h2>
+					<h1><strong>Barrett et al. 2017</strong><h1>
+				</header>
+
+				<button class="collapsible">Details</button>
+
+				<div class="content"> 
+					<!-- Authors -->
+					<p>
+					<strong>Authors:</strong> Barrett, J., Mandel, I., Neijssel, C., Stevenson, S., Vigna-Gomez, A.<br>
+					<strong>Journal:</strong> <a href="https://www.cambridge.org/core/journals/proceedings-of-the-international-astronomical-union/article/exploring-the-parameter-space-of-compact-binary-population-synthesis/1501700F2C1D57978DAC87ABF1658286">Proceedings of the International Astronomical Union</a><br>
+					<strong>arXiv:</strong> <a href="https://arxiv.org/abs/1704.03781">1704.03781 [astro-ph.HE]</a>
+					</p>
+
+					<!-- Description -->
+					<p> As we enter the era of gravitational wave astronomy, we are beginning to collect observations which will enable us to explore aspects of astrophysics of massive stellar binaries which were previously beyond reach. In this paper we describe COMPAS (Compact Object Mergers: Population Astrophysics and Statistics), a new platform to allow us to deepen our understanding of isolated binary evolution and the formation of gravitational-wave sources. We describe the computational challenges associated with their exploration, and present preliminary results on overcoming them using Gaussian process regression as a simulation emulation technique. </p>
+
+				</div>
+			</article>
+
+
+								<!-- Mandel et al. 2016 -->
+								<article>
+									<header>
+										<h2 id="16080822" style="margin-bottom:0.5em">Model-Independent Inference on Compact-Binary Observations</h2>
+										<h1><strong>Mandel et al. 2016</strong><h1>
+									</header>
+
+									<button class="collapsible">Details</button>
+
+									<div class="content"> 
+
+										<p>
+											<strong>Authors:</strong> <strong>Mandel, I.</strong>, Farr, W. M., Colonna, A., <strong>Stevenson, S.</strong>, Tiňo, P. &amp; Veitch, J.<br>
+											<strong>Journal:</strong> <a href="http://mnras.oxfordjournals.org/content/early/2016/11/08/mnras.stw2883">MNRAS</a><br>
+											<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1608.08223">1608.08223 [astro-ph.HE]</a>
+										</p>
+
+										<span class="image featured"><img src="images/bin_density.png" alt="" class="image left"/></span>
+										<p> The increasing number of gravitational-wave observations promises to lead to insights into stellar binary evolution.  One approach is to compare specific evolution models against observations; however, given the uncertainty in the models, a model-independent approach to astrophysical inference is desirable.  In an <a href="http://arxiv.org/abs/1503.03172">earlier paper</a>, we advocated clustering in a multi-dimensional parameter space.  Here, we propose a practical procedure to clustering observations which are subject to significant measurement errors.  We apply our method to a mock data set of population-synthesis predictions for compact binaries incorporating realistic measurement uncertainties.  We demonstrate that a few tens of observations are sufficient to accurately distinguish subpopulations of sources.  The example shows what we could infer with varying numbers of observations. The plots shows inferred population density for different mass bins assuming a Gaussian process prior; you can make out clusters for binary neutron stars (in the bottom left corner), neutron star&ndash;black hole binaries (along the edges) and binary black holes (in the centre).</p>
+									</div>
+								</article>
+
+
+								<!-- Stevenson et al. 2015 - Does this belong here? Is this COMPAS? -->
+								<article>
+									<header>
+										<h2 id="150407802" style="margin-bottom:0.5em">Distinguishing Compact Binary Population Synthesis Models using Gravitational Wave Observations of Coalescing Binary Black Holes</h2>
+										<h1><strong>Stevenson et al. 2015</strong><h1>
+									</header>
+
+									<button class="collapsible">Details</button>
+
+									<div class="content"> 
+
+										<!-- Authors -->
+										<p>
+											<strong>Authors:</strong> <strong>Stevenson S.</strong>, Ohme, F. &amp; Fairhurst, S.<br>
+											<strong>Journal:</strong> <a href="http://dx.doi.org/10.1088/0004-637X/810/1/58">ApJ</a><br>
+											<strong>arXiv:</strong> <a href="http://arxiv.org/abs/1504.07802">1504.07802 [astro-ph.HE]</a>
+										</p>
+
+										<!-- Description -->
+
+										<span class="image featured"><img src="images/square_plot.png" alt="" class="image left"/></span>
+
+										<p>Advanced LIGO began the hunt for gravitational waves from colliding black holes in 2015, with Advanced Virgo to join in 2017.  Black holes are the remains of stars with masses tens of times the mass of the Sun.  One way for two of these black holes to collide is to live and die as a binary.  These stars constantly shed mass in stellar winds, violently strip mass from one another, explode as supernova, and even engulf one another in common-envelope events.  Most of these processes have so far been studied using systems we can see, such as X-ray binaries, but remain poorly understood.  However, they also leave an imprint on the masses of the black holes.  Therefore, by comparing the distribution of masses of binary black holes that Advanced LIGO and Advanced Virgo find with a prediction from a model, we can learn about these extreme evolutionary processes and the lives of massive stars.  The chequerboard type plot shown on the left compares simulated observations from each model in a set of <a href="http://www.syntheticuniverse.org">models</a> to all of the others in turn.  Darker squares indicate that models are similar, and lighter squares indicate that we can tell models apart.  The dark strip on the diagonal shows that models do look like themselves.  Since there are lots of lighter squares, it is possible to distinguish between many models.  We should be able to learn lots about binary evolution over the next couple of years!</p>
+									</div>
+								</article>
+
 							</div>
 						</div>
+
+
+						<!-- Right Column: Recent News (& Preprints) -->
+						<div class="4u 12u(narrower)">
+							<div id="sidebar">
+
+								<!-- Recent News -->
+								<section>
+									<h3>Recent news &amp; results</h3>
+
+									<p>22 May 2018: New <a href="http://arxiv.org/abs/1806.05820">not-a-review</a> on massive binary black holes.</p>
+
+									<p>22 May 2018: New <a href="http://arxiv.org/abs/1805.07974">preprint</a> on simulating the Galactic binary neutron star population. Data are <a href="https://zenodo.org/communities/compas/?page=1&size=20">available</a>.</p>
+
+									<p>12 April 2018: Paper published in <a href="http://doi.org/10.1093/mnras/sty908"><em>Monthly Notices of the Royal Astronomical Society</em></a> on measuring pop synthesis parameters with gravitational-wave observations.</p>
+
+									<p>16 November 2017: New <a href="http://arxiv.org/abs/1711.06287">preprint</a> on measuring binary-evolution parameters with gravitational-wave observations.</p>
+
+									<p>24 August 2017: Paper published in <a href="http://doi.org/10.1038/nature23453"><em>Nature</em></a> on spin measurements for LIGO's observations.</p>
+
+									<p>14 July 2017: Paper published in <a href="http://doi.org/10.1093/mnras/stx1764"><em>Monthly Notices of the Royal Astronomical Society</em></a> on hierarchical modelling.</p>
+
+									<p>30 May 2017: New <a href="http://doi.org/10.1017/S1743921317000059">conference proceedings</a> on exploring binary population parameters.</p>
+
+									<p>5 April 2017: Paper published in <a href="http://dx.doi.org/10.1038/ncomms14906"><em>Nature Communications</em></a> on reproducing LIGO's observations.</p>
+
+									<p>21 March 2017: New <a href="http://arxiv.org/abs/1703.06873">preprint</a> on hierarchical modelling.</p>
+
+								</section>
+
+								<!-- Do we need preprints if they are included in the papers?
+								<section>
+									<h3>Preprint &amp; publication links</h3>
+									<ul class="links">
+										<li><a href="http://arxiv.org/abs/1806.05820">Merging stellar-mass binary black holes</a></li>
+										<li><a href="http://arxiv.org/abs/1805.07974">On the formation history of Galactic double neutron stars</a></li>
+										<li><a href="http://arxiv.org/abs/1711.06287">Accuracy of inference on the physics of binary evolution from gravitational-wave observations</a></li>
+										<li><a href="http://arxiv.org/abs/1706.01385">Distinguishing spin-aligned and isotropic black hole populations with gravitational waves</a></li>
+										<li><a href="http://arxiv.org/abs/1703.06873">Hierarchical analysis of gravitational-wave measurements of binary black hole spin-orbit misalignments</a></li>
+										<li><a href="http://arxiv.org/abs/1608.08223">Model-independent inference on compact-binary observations</a></li>
+										<li><a href="http://arxiv.org/abs/1504.07802">Distinguishing compact binary population synthesis models using gravitational-wave observations of coalescing binary black holes</a></li>
+									</ul>
+									<footer>
+										<a href="http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?library&libname=COMPAS&libid=5491451795" class="button">NASA ADS</a>
+									</footer>
+								</section> -->
+
+							</div>
+						</div>
+
 					</div>
-				</section>
+				</div>
+			</section>
 
 			<!-- Footer ->
-				<div id="footer">
-					<div class="container">
-						<div class="row">
-							<section class="6u 12u(narrower))">
-								<h3>Software links</h3>
-								<ul class="links">
-									<li><a href="https://wiki.ligo.org/DASWG/LALSuite">LALSuite</a></li>
-									<li><a href="http://dan.iel.fm/emcee/current/">emcee</a></li>
-								</ul>
-							</section>
-							<section class="6u 12u(narrower)">
-								<ul class="links">
-									<li><a href="http://www.birmingham.ac.uk/gravitational-waves/">Institute of Gravitational Wave Astronomy</a>, University of Birmingham</li>
-									<li><a href="http://astronomy.swin.edu.au/">Centre for Astrophysics and Supercomputing</a>, Swinburne University of Technology</li>
-									<li><a href="http://www.monash.edu/moca">Monash Centre for Astrophysics</a>, Monash University</li>
-									<li><a href="http://astro.physics.unimelb.edu.au/">Astrophysics Group</a>, University of Melbourne</li>
-									<li><a href="http://http://www.astro.uva.nl/">Anton Pannekoek Institute for Astronomy</a>, University of Amsterdam</li>
-									<li><a href="http://www.ozgrav.org/">OzGrav</a>, ARC Centre of Excellence for Gravitational Wave Discovery</li>
-								</ul>
-							</section>
-						</div>
-					</div>  
-
-					<!- Icons ->
-						<ul class="icons">
-							<li><a href="mailto:compas@star.sr.bham.ac.uk" class="icon fa-envelope"><span class="label">Email</span></a></li>
-							<!-<li><a href="https://twitter.com/UoBIGWaves" class="icon fa-twitter"><span class="label">Twitter</span></a></li>->
-							<li><a href="http://github.com/compas-bham" class="icon fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-
-					<!- Copyright ->
-						<div class="copyright">
-							<ul class="menu">
-								<li>&copy; 2016&ndash;2018, <a href="http://www.sr.bham.ac.uk/">Astrophysics &amp; Space Research Group</a>, University of Birmingham. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<section class="6u 12u(narrower))">
+							<h3>Software links</h3>
+							<ul class="links">
+								<li><a href="https://wiki.ligo.org/DASWG/LALSuite">LALSuite</a></li>
+								<li><a href="http://dan.iel.fm/emcee/current/">emcee</a></li>
 							</ul>
-						</div>
-				</div> -->
+						</section>
+						<section class="6u 12u(narrower)">
+							<ul class="links">
+								<li><a href="http://www.birmingham.ac.uk/gravitational-waves/">Institute of Gravitational Wave Astronomy</a>, University of Birmingham</li>
+								<li><a href="http://astronomy.swin.edu.au/">Centre for Astrophysics and Supercomputing</a>, Swinburne University of Technology</li>
+								<li><a href="http://www.monash.edu/moca">Monash Centre for Astrophysics</a>, Monash University</li>
+								<li><a href="http://astro.physics.unimelb.edu.au/">Astrophysics Group</a>, University of Melbourne</li>
+								<li><a href="http://http://www.astro.uva.nl/">Anton Pannekoek Institute for Astronomy</a>, University of Amsterdam</li>
+								<li><a href="http://www.ozgrav.org/">OzGrav</a>, ARC Centre of Excellence for Gravitational Wave Discovery</li>
+							</ul>
+						</section>
+					</div>
+				</div>  
 
+				<!- Icons ->
+					<ul class="icons">
+						<li><a href="mailto:compas@star.sr.bham.ac.uk" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						<!-<li><a href="https://twitter.com/UoBIGWaves" class="icon fa-twitter"><span class="label">Twitter</span></a></li>->
+						<li><a href="http://github.com/compas-bham" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					</ul>
 
-
+				<!- Copyright ->
+					<div class="copyright">
+						<ul class="menu">
+							<li>&copy; 2016&ndash;2018, <a href="http://www.sr.bham.ac.uk/">Astrophysics &amp; Space Research Group</a>, University of Birmingham. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+			</div> -->
 		</div>
 
 
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
 
-			<!-- From w3schools.com -->
-			<script>
+		<!-- From w3schools.com -->
+		<script>
 			var coll = document.getElementsByClassName("collapsible");
 			var i;
 			for (i = 0; i < coll.length; i++) {
@@ -371,32 +541,32 @@ the black holes merge and form a single black hole.
 			    }
 			  });
 			}
-			</script>
+		</script>
 
-			<!-- New paper format ->
-				<!- Author1 et al. #### ->
-				<article>
-					<header>
-						<h2 id="012345678" style="margin-bottom:0.5em">Paper Title</h2>
-						<h1><strong>Author1 et al. ####</strong><h1>
-					</header>
+		<!-- New paper format ->
+			<!- Author1 et al. #### ->
+			<article>
+				<header>
+					<h2 id="012345678" style="margin-bottom:0.5em">Paper Title</h2>
+					<h1><strong>Author1 et al. ####</strong><h1>
+				</header>
 
-					<button class="collapsible">Details</button>
+				<button class="collapsible">Details</button>
 
-					<div class="content"> 
-						<!- Authors ->
-						<p>
-						<strong>Authors:</strong> <strong>List</strong>, <strong>of</strong> &amp; <strong>Authors</strong></br>
-						<strong>Journal:</strong> <a href="website.com">JOURNAL</a></br>
-						<strong>arXiv:</strong> <a href="http://arxiv.org/abs/0123.45678">0123.45678 [astro-ph.HE]</a>
-						</p>
+				<div class="content"> 
+					<!- Authors ->
+					<p>
+					<strong>Authors:</strong> <strong>List</strong>, <strong>of</strong> &amp; <strong>Authors</strong><br>
+					<strong>Journal:</strong> <a href="website.com">JOURNAL</a><br>
+					<strong>arXiv:</strong> <a href="http://arxiv.org/abs/0123.45678">0123.45678 [astro-ph.HE]</a>
+					</p>
 
-						<!- Description ->
-						<p> Description of the paper </p>
+					<!- Description ->
+					<p> Description of the paper </p>
 
-					</div>
-				</article>
-			End of new paper format -->
+				</div>
+			</article>
+		End of new paper format -->
 
 
 	</body>

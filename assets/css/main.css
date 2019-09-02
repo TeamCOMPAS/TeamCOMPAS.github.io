@@ -28,6 +28,7 @@
 
 	ol, ul {
 		list-style: none;
+		list-style-position: inside; /*Reinhold edit*/
 	}
 
 	blockquote, q {

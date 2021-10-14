@@ -13,8 +13,14 @@ def main(url):
         print("Link is no good")
         return
 
-    [print(x) for x in getArxivData(arxiv_link)]
+    arxiv_data = getArxivData(arxiv_link)
+    output_text = prepareOutputText(*arxiv_data)
+    addOutputTextToWebsite(*output_text)
 
+def addOutputTextToWebsite(mainEntry, newsEntry):
+
+    # Open science.html and splice in the new Main and News entries
+    return 
 
 def readHtml(url):
     data = urllib.request.urlopen(url)
@@ -34,9 +40,84 @@ def getArxivData(url):
     html_title = re.search("<title>.*</title>", html).group()
     arxiv_number = html_title[8:18]
     article_title = html_title[20:-8]
+    authors = re.search('<div.*Authors.*div>', html).group().split('</a>')[:-1]
+    for ii, author in enumerate(authors):
+        authors[ii] = author.split('>')[-1]
+    date = re.search('\[Submitted.*\]', html).group()[14:-1]
     abstract = re.search('<meta name="citation_abstract".*?/>', html, flags=re.DOTALL).group()[41:-4]
 
-    return arxiv_number, article_title, abstract
+    return arxiv_number, article_title, authors, date, abstract
+
+def prepareOutputText(arxiv_number, article_title, authors, date, abstract):
+
+    lead_author = authors[0].split()[-1]
+    allAuthors = '; '.join(authors)
+    year = date.split()[-1]
+    etAl = lead_author + " et al. " + year
+    arx_id = arxiv_number[:4]+arxiv_number[5:] # the two numbers concatenated with the period removed
+
+    mainEntry = createMainEntry(article_title, etAl, authors, arx_id, arxiv_number, abstract)
+    newsEntry = createNewsEntry(date, arx_id, etAl, article_title, abstract)
+    return mainEntry, newsEntry
+
+def createMainEntry(title, etAl, allAuthors, arx_id, arxiv_number, abstract):
+
+    # Write up the final string, and use string formatting to fill it in with the required variables
+    one_line_abstract = abstract.replace('\n', '') # remove newlines, make abstract all one line
+    mainEntry = \
+    """
+                <!-- {etAl} -->
+                <article>
+                    <header>
+                        <h2 id="{arx_id}" style="margin-bottom:0.5em"> {title} </h2>
+ 
+                        <h1><strong>{etAl}</strong><h1>
+                    </header>
+
+                    <button class="collapsible">Details</button>
+
+                    <div class="content">
+                        <!-- Authors -->
+                        <p>
+                        <strong>Authors:</strong>
+                        {allAuthors}
+                        <br>
+
+                        <!-- <strong>Journal:</strong> <a href="website.com">JOURNAL</a><br>  -->
+                        <strong>arXiv:</strong> <a href="https://arxiv.org/pdf/{arxiv_number}.pdf">{arxiv_number}</a></p>
+
+                        <!-- Description -->
+                        <p>
+                        {abstract}
+                        </p>
+                    </div>
+                </article>
+
+    """.format(title=title, etAl=etAl, arxiv_number=arxiv_number, arx_id=arx_id, allAuthors=allAuthors, abstract=one_line_abstract)
+
+    return mainEntry
+
+def createNewsEntry(date, arx_id, etAl, title, abstract):
+
+    # Print out the details of the article, so that the user can then input a synopsis
+    print("\n{}\n\n{}\n\n{}\n".format(etAl, title, abstract))
+
+    # Create the first line of the news bulletin, and show this to the user when asking for the remainder to be typed
+    news_line1 = '{date}: New <a href="science.html#{arx_id}">preprint</a>'.format(date=date, arx_id=arx_id)
+
+    user_input_header_string = "\n=========================\nUser input needed for news synopsis!\n\n{}\n".format(news_line1)
+    user_string = input(user_input_header_string)
+
+    newsEntry = """
+                  <p> 
+                  {news_line1}
+                  {user_string}
+                  </p>
+    """.format(news_line1=news_line1, user_string=user_string)
+
+    return newsEntry
+
+
 
 
 if __name__ == "__main__":
@@ -44,4 +125,4 @@ if __name__ == "__main__":
     my_paper_arx = 'https://arxiv.org/abs/2107.04251'
     lieke_paper_ads = 'https://ui.adsabs.harvard.edu/abs/2021arXiv211001634V/abstract'
 
-    main(lieke_paper_ads)
+    main(my_paper_arx)

@@ -20,6 +20,23 @@ def main(url):
 def addOutputTextToWebsite(mainEntry, newsEntry):
 
     # Open science.html and splice in the new Main and News entries
+    fname = 'science.html'
+    with open(fname, 'r') as fread:
+        lines = fread.readlines()
+    
+    break1 = "                <!-- INSERT PAPERS BELOW -->\n"
+    break2 = "                  <!-- INSERT NEWS BELOW -->\n"
+    index1 = lines.index(break1)
+    index2 = lines.index(break2)
+    
+    # Insert News first, since it won't mess with the Main index
+    lines.insert(index2+1, newsEntry)
+    lines.insert(index1+1, mainEntry)
+
+    # Overwrite the old science.html file with the new entries
+    with open(fname, 'w') as fwrite:
+        fwrite.write('\n'.join(lines)) 
+
     return 
 
 def readHtml(url):
@@ -66,6 +83,7 @@ def createMainEntry(title, etAl, allAuthors, arx_id, arxiv_number, abstract):
     one_line_abstract = abstract.replace('\n', '') # remove newlines, make abstract all one line
     mainEntry = \
     """
+
                 <!-- {etAl} -->
                 <article>
                     <header>
@@ -109,6 +127,7 @@ def createNewsEntry(date, arx_id, etAl, title, abstract):
     user_string = input(user_input_header_string)
 
     newsEntry = """
+
                   <p> 
                   {news_line1}
                   {user_string}

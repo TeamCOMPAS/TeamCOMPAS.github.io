@@ -1,7 +1,11 @@
+import sys
 import urllib, urllib.request
 import re
 
-def main(url):
+
+def main():
+
+    url = input("Paste ArXiV or ADS link here:\n")
 
     if (re.search("adsabs", url) is not None):
         arxiv_link = convertAdsLinkToArxiv(url)
@@ -17,11 +21,14 @@ def main(url):
     output_text = prepareOutputText(*arxiv_data)
     addOutputTextToWebsite(*output_text)
 
+    print("\n:: The new paper has been added ::\n")
+
 def addOutputTextToWebsite(mainEntry, newsEntry):
 
     # Open science.html and splice in the new Main and News entries
-    fname = 'science.html'
-    with open(fname, 'r') as fread:
+    fname_in = 'science.html'
+    fname_out = 'science2.html'
+    with open(fname_in, 'r') as fread:
         lines = fread.readlines()
     
     break1 = "                <!-- INSERT PAPERS BELOW -->\n"
@@ -34,7 +41,7 @@ def addOutputTextToWebsite(mainEntry, newsEntry):
     lines.insert(index1+1, mainEntry)
 
     # Overwrite the old science.html file with the new entries
-    with open(fname, 'w') as fwrite:
+    with open(fname_out, 'w') as fwrite:
         fwrite.write('\n'.join(lines)) 
 
     return 
@@ -73,7 +80,7 @@ def prepareOutputText(arxiv_number, article_title, authors, date, abstract):
     etAl = lead_author + " et al. " + year
     arx_id = arxiv_number[:4]+arxiv_number[5:] # the two numbers concatenated with the period removed
 
-    mainEntry = createMainEntry(article_title, etAl, authors, arx_id, arxiv_number, abstract)
+    mainEntry = createMainEntry(article_title, etAl, allAuthors, arx_id, arxiv_number, abstract)
     newsEntry = createNewsEntry(date, arx_id, etAl, article_title, abstract)
     return mainEntry, newsEntry
 
@@ -141,7 +148,4 @@ def createNewsEntry(date, arx_id, etAl, title, abstract):
 
 if __name__ == "__main__":
 
-    my_paper_arx = 'https://arxiv.org/abs/2107.04251'
-    lieke_paper_ads = 'https://ui.adsabs.harvard.edu/abs/2021arXiv211001634V/abstract'
-
-    main(my_paper_arx)
+    main()

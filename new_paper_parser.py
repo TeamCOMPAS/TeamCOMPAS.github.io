@@ -26,9 +26,8 @@ def main():
 def addOutputTextToWebsite(mainEntry, newsEntry):
 
     # Open science.html and splice in the new Main and News entries
-    fname_in = 'science.html'
-    fname_out = 'science2.html'
-    with open(fname_in, 'r') as fread:
+    fname = 'science.html'
+    with open(fname, 'r') as fread:
         lines = fread.readlines()
     
     break1 = "                <!-- INSERT PAPERS BELOW -->\n"
@@ -41,7 +40,7 @@ def addOutputTextToWebsite(mainEntry, newsEntry):
     lines.insert(index1+1, mainEntry)
 
     # Overwrite the old science.html file with the new entries
-    with open(fname_out, 'w') as fwrite:
+    with open(fname, 'w') as fwrite:
         fwrite.write('\n'.join(lines)) 
 
     return 

@@ -1,6 +1,7 @@
-import sys
+import os, sys
 import urllib, urllib.request
 import re
+#import textwrap
 
 
 def main():
@@ -29,9 +30,8 @@ def addOutputTextToWebsite(mainEntry, newsEntry):
     fname = 'science.html'
     with open(fname, 'r') as fread:
         lines = fread.readlines()
-    
-    break1 = "                <!-- INSERT PAPERS BELOW -->\n"
-    break2 = "                  <!-- INSERT NEWS BELOW -->\n"
+    break1 = "                            <!-- INSERT PAPERS BELOW -->\n"
+    break2 = "                                <!-- INSERT NEWS BELOW -->\n"
     index1 = lines.index(break1)
     index2 = lines.index(break2)
     
@@ -41,7 +41,10 @@ def addOutputTextToWebsite(mainEntry, newsEntry):
 
     # Overwrite the old science.html file with the new entries
     with open(fname, 'w') as fwrite:
-        fwrite.write('\n'.join(lines)) 
+        fwrite.write(''.join(lines)) 
+
+    # Tidy up the file
+    #os.system('./tidy_html.sh science.html')
 
     return 
 
@@ -66,8 +69,15 @@ def getArxivData(url):
     authors = re.search('<div.*Authors.*div>', html).group().split('</a>')[:-1]
     for ii, author in enumerate(authors):
         authors[ii] = author.split('>')[-1]
-    date = re.search('\[Submitted.*\]', html).group()[14:-1]
+    date = re.search('\[Submitted.*\]', html).group()[1:-1] # Contains string "Submitted on DD Mon YYYY"
+    print(date)
+    date = ' '.join(date.split()[2:])
     abstract = re.search('<meta name="citation_abstract".*?/>', html, flags=re.DOTALL).group()[41:-4]
+
+    print(date)
+    print()
+    print()
+    print()
 
     return arxiv_number, article_title, authors, date, abstract
 
@@ -89,36 +99,35 @@ def createMainEntry(title, etAl, allAuthors, arx_id, arxiv_number, abstract):
     one_line_abstract = abstract.replace('\n', '') # remove newlines, make abstract all one line
     mainEntry = \
     """
+                            <!-- {etAl} -->
+                            <article>
+                                <header>
+                                    <h2 id="{arx_id}" style="margin-bottom:0.5em"> {title} </h2>
+             
+                                    <h1><strong>{etAl}</strong><h1>
+                                </header>
+            
+                                <button class="collapsible">Details</button>
+            
+                                <div class="content">
+                                    <!-- Authors -->
+                                    <p>
+                                    <strong>Authors:</strong>
+                                    {allAuthors}
+                                    <br>
+            
+                                    <!-- <strong>Journal:</strong> <a href="website.com">JOURNAL</a><br>  -->
+                                    <strong>arXiv:</strong> <a href="https://arxiv.org/pdf/{arxiv_number}.pdf">{arxiv_number}</a></p>
+            
+                                    <!-- Description -->
+                                    <p>
+                                    {abstract}
+                                    </p>
+                                </div>
+                            </article>""".format(title=title, etAl=etAl, arxiv_number=arxiv_number, arx_id=arx_id, allAuthors=allAuthors, abstract=one_line_abstract)
 
-                <!-- {etAl} -->
-                <article>
-                    <header>
-                        <h2 id="{arx_id}" style="margin-bottom:0.5em"> {title} </h2>
- 
-                        <h1><strong>{etAl}</strong><h1>
-                    </header>
-
-                    <button class="collapsible">Details</button>
-
-                    <div class="content">
-                        <!-- Authors -->
-                        <p>
-                        <strong>Authors:</strong>
-                        {allAuthors}
-                        <br>
-
-                        <!-- <strong>Journal:</strong> <a href="website.com">JOURNAL</a><br>  -->
-                        <strong>arXiv:</strong> <a href="https://arxiv.org/pdf/{arxiv_number}.pdf">{arxiv_number}</a></p>
-
-                        <!-- Description -->
-                        <p>
-                        {abstract}
-                        </p>
-                    </div>
-                </article>
-
-    """.format(title=title, etAl=etAl, arxiv_number=arxiv_number, arx_id=arx_id, allAuthors=allAuthors, abstract=one_line_abstract)
-
+    # Wrap the text to the number of chars used in the tidy function, i.e 68
+    #mainEntry = textwrap.TextWrapper(width=68)
     return mainEntry
 
 def createNewsEntry(date, arx_id, etAl, title, abstract):

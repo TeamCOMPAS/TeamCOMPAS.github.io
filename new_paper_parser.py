@@ -1,7 +1,6 @@
 import os, sys
 import urllib, urllib.request
 import re
-#import textwrap
 
 
 def main():
@@ -126,8 +125,6 @@ def createMainEntry(title, etAl, allAuthors, arx_id, arxiv_number, abstract):
                                 </div>
                             </article>""".format(title=title, etAl=etAl, arxiv_number=arxiv_number, arx_id=arx_id, allAuthors=allAuthors, abstract=one_line_abstract)
 
-    # Wrap the text to the number of chars used in the tidy function, i.e 68
-    #mainEntry = textwrap.TextWrapper(width=68)
     return mainEntry
 
 def createNewsEntry(date, arx_id, etAl, title, abstract):

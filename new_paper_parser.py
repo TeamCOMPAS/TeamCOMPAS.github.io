@@ -71,8 +71,7 @@ def getArxivData(url):
     date = re.search('\[Submitted.*\]', html).group()[1:-1] # Contains string "Submitted on DD Mon YYYY"
     print(date)
     date = ' '.join(date.split()[2:])
-    abstract = re.search('<meta name="citation_abstract".*?/>', html, flags=re.DOTALL).group()[41:-4]
-
+    abstract = re.search('<meta name="citation_abstract".*?/>', html, flags=re.DOTALL).group()[40:-4]
     print(date)
     print()
     print()
